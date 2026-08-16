@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday, Mansi!</title>
+
+  <!-- This script pulls in Tailwind CSS for styling -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- These are for the animations and photo gallery -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.1/css/lightgallery.min.css" />
+
+  <!-- Google Fonts for the Anime look -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Link to your new external CSS file -->
+  <link rel="stylesheet" href="storyArc.css">
+  <!-- IMPORTANT: Replace with a real image link after you upload it -->
+  <meta property="og:image" content="https://placehold.co/1200x630/87CEEB/FFFFFF?text=A+Surprise+For+[Name]">
+</head>
+<body>
+<!-- Canvas for the falling cherry blossoms -->
+<canvas id="sakura-canvas"></canvas>
+
+<!-- Section 1: Hero Welcome -->
+<header class="h-screen relative flex items-center justify-center text-white overflow-hidden">
+  <video autoplay loop muted playsinline class="absolute top-0 left-0 w-full h-full object-cover z-[-1]">
+    <source src="img/sa.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+
+  <div class="text-center z-10 p-4" data-aos="fade-in" data-aos-duration="1500">
+    <h1 class="text-5xl md:text-7xl font-anime drop-shadow-lg">Happy Birthday, Mansi ✨</h1>
+    <p class="mt-4 text-xl font-semibold">Celebrating a wonderful journey of dreams, adventures, and everything in between</p>
+    <div id="countdown" class="mt-6 text-2xl font-semibold tracking-widest leading-relaxed"></div>
+  </div>
+</header>
+
+<!-- Main Content -->
+<main class="container mx-auto p-6 md:p-12">
+
+  <!-- Section 2: A Letter For You -->
+  <section class="my-16 md:my-24 max-w-3xl mx-auto text-center" data-aos="fade-up">
+    <h2 class="text-4xl md:text-5xl font-anime text-sakura mb-8 drop-shadow-sm">A Special Message For You</h2>
+    <div class="text-left text-lg leading-relaxed space-y-4 bg-white p-8 rounded-lg shadow-lg">
+      <!-- TODO: Write your personal letter here -->
+      <p>Hey Mansi,</p>
+      <p>Happy Birthday! 🎂</p>
+      <p>I hope this little surprise brings a smile to your face, because you deserve a day filled with them.</p>
+      <p>It's funny how some people come into our lives without us really knowing how much they'll end up meaning to us. I'm genuinely glad our paths crossed, and I'm grateful for all the conversations, laughs, random moments, and memories we've shared.</p>
+      <p>We are not in city of gems still I found a real gem. I hope you always stay true to the person you are.</p>
+      <p>As you step into another year, I hope you get to experience everything you've been dreaming about — new adventures, beautiful places, unforgettable memories, and plenty of reasons to laugh until your cheeks hurt.</p>
+      <p>Keep chasing the things that make you happy. Keep that spark alive. And most importantly, keep being you.</p>
+      <p>Here's to another year of your story — and hopefully, some really amazing chapters ahead. ✨</p>
+      <p>Happy Birthday once again! ❤️</p>
+      <p class="text-right mt-8">
+        Regards<br>
+      </p>
+    </div>
+  </section>
+
+  <!-- Section 3: The Timeline -->
+  <section class="my-16 md:my-24">
+    <h2 class="text-4xl md:text-5xl font-anime text-center mb-12" data-aos="fade-up">Your Story Arc</h2>
+    <div class="space-y-16">
+      <!-- Timeline Item 1 -->
+      <div class="flex flex-col md:flex-row items-center gap-8" data-aos="fade-right">
+        <!-- TODO: Replace with your photo -->
+        <!-- <img src="img/jammu.png" alt="Add photo 1" class="w-full md:w-1/2 rounded-lg shadow-xl border-4 border-white"> -->
+        <video autoplay playsinline muted loop width="320" height="240">
+          <source src="video/DublinSchenegans.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="text-center md:text-left">
+          <!-- TODO: Customize the date and story -->
+          <h3 class="text-2xl font-anime text-sakura">Finding Home Away From Home</h3>
+          <p class="mt-2 text-lg">Sometimes a new city becomes a new chapter—new people, new experiences, and plenty of stories to take back home.</p>
+          <p class="mt-2 text-lg">Away from home, but never short of adventures. Here’s to making Dublin a little more your own. 🎯.</p>
+            <br>
+        </div>
+      </div>
+      <!-- Timeline Item 2 -->
+      <div class="flex flex-col md:flex-row-reverse items-center gap-8" data-aos="fade-left">
+        <!-- TODO: Replace with your photo -->
+        <video autoplay playsinline muted loop width="320" height="240">
+          <source src="video/Hustle.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="text-center md:text-right">
+          <!-- TODO: Customize the date and story -->
+          <h3 class="text-2xl font-anime text-sakura">The Hustle Behind the Scenes</h3>
+          <p class="mt-2 text-lg">Behind all the smiles, laughs, and good times, there's a side of life that doesn't always make it into the picture. Managing life, work, and finances while being miles away from.</p>
+          <p class="mt-2 text-lg">Here's to all the hard work that nobody sees, but that has helped shape the person you are today. ❤️</p>
+          <br>
+        </div>
+      </div>
+      <!-- Timeline Item 3 (NEW) -->
+      <div class="flex flex-col md:flex-row items-center gap-8" data-aos="fade-right">
+        <video autoplay playsinline muted loop width="320" height="240">
+          <source src="video/Distinction.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="text-center md:text-left">
+          <h3 class="text-2xl font-anime text-sakura">From Late Nights to Distinction 🎓</h3>
+          <p class="mt-2 text-lg">All those long days, late nights, deadlines, and moments of wondering if it would all be worth it eventually led to this.</p>
+          <p class="mt-2 text-lg"><strong>The Graduation day.</strong></p>
+          <p class="mt-2 text-lg">And not just any graduation—You finished your journey at Trinity with a <strong>Distinction</strong>. 🎓✨</p>
+          <p class="mt-2 text-lg">It’s one thing to dream about achieving something. It’s another to put in the work, keep going when things get difficult, and actually make it happen.</p>
+          <p class="mt-2 text-lg">A degree, a distinction, and a whole lot of reasons to be proud.</p>
+          <br>
+        </div>
+      </div>
+      <!-- Timeline Item 4 (NEW) -->
+      <div class="flex flex-col md:flex-row-reverse items-center gap-8" data-aos="fade-left">
+        <video autoplay playsinline muted loop width="320" height="240">
+          <source src="video/Professional.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="text-center md:text-right">
+          <h3 class="text-2xl font-anime text-sakura">The Professional Chapter</h3>
+          <p class="mt-2 text-lg">And just like that, another chapter began.</p>
+          <p class="mt-2 text-lg">A new workplace, new responsibilities, new challenges, a whole new side of life to discover and a chance to finally put all those years of learning into practice.</p>
+          <p class="mt-2 text-lg">Here's to learning, growing, making mistakes, finding your way, and slowly building the career you've always imagined. 💼</p>  
+          <br>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 4: Your Favourite Photos of your loved Ones (NEW SECTION) -->
+  <section class="my-16 md:my-24">
+    <h2 class="text-4xl md:text-5xl font-anime text-center mb-12" data-aos="fade-up">Hall of Fame</h2>
+    <div class="relative">
+      <!-- Scroll Buttons -->
+      <button id="scroll-left-btn" class="absolute left-0 top-1/2 -translate-y-1/2 z-20 bg-white/80 hover:bg-white rounded-full p-2 shadow-md transition-opacity opacity-0 md:opacity-100">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-sakura" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg>
+      </button>
+      <button id="scroll-right-btn" class="absolute right-0 top-1/2 -translate-y-1/2 z-20 bg-white/80 hover:bg-white rounded-full p-2 shadow-md transition-opacity opacity-0 md:opacity-100">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-sakura" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+      </button>
+
+      <!-- Scrollable Container -->
+      <div id="hall-of-fame-scroller" class="flex overflow-x-auto scroll-smooth snap-x snap-mandatory scrollbar-hide p-4 -mx-4">
+        <div class="flex snap-x snap-mandatory gap-8">
+          <!--  Card 1 -->
+          <div class="snap-center flex-shrink-0 w-10/12 sm:w-1/2 md:w-1/3 lg:w-1/4" data-aos="fade-up" data-aos-delay="100">
+            <div class="bg-white p-6 rounded-lg shadow-lg text-center h-full">
+              <img src="hallOfFame/TheMainCharacter.jpg" alt="Photo 1" class="w-full h-80 object-cover rounded-md mb-4">
+              <h3 class="text-2xl font-anime text-sakura">The main Character</h3>
+            </div>
+          </div>
+          <!--  Card 2 -->
+          <div class="snap-center flex-shrink-0 w-10/12 sm:w-1/2 md:w-1/3 lg:w-1/4" data-aos="fade-up" data-aos-delay="200">
+            <div class="bg-white p-6 rounded-lg shadow-lg text-center h-full">
+              <img src="hallOfFame/TheDanceFloorQueen.jpg" alt="Photo 2" class="w-full h-80 object-cover rounded-md mb-4">
+              <h3 class="text-2xl font-anime text-sakura">The Dance Floor Queen</h3>
+            </div>
+          </div>
+          <!--  Card 3 -->
+          <div class="snap-center flex-shrink-0 w-10/12 sm:w-1/2 md:w-1/3 lg:w-1/4" data-aos="fade-up" data-aos-delay="300">
+            <div class="bg-white p-6 rounded-lg shadow-lg text-center h-full">
+              <img src="hallOfFame/SareeAndSlay.jpg" alt="Photo 3" class="w-full h-80 object-cover rounded-md mb-4">
+              <h3 class="text-2xl font-anime text-sakura">Saree & Slay</h3>
+            </div>
+          </div>
+          <!--  Card 4 -->
+          <div class="snap-center flex-shrink-0 w-10/12 sm:w-1/2 md:w-1/3 lg:w-1/4" data-aos="fade-up" data-aos-delay="400">
+            <div class="bg-white p-6 rounded-lg shadow-lg text-center h-full">
+              <img src="hallOfFame/BeautyWithBrains.jpg" alt="Photo 4" class="w-full h-80 object-cover rounded-md mb-4">
+              <h3 class="text-2xl font-anime text-sakura">Beauty With Brains</h3>
+            </div>
+          </div>
+          <!--  Card 5 -->
+          <div class="snap-center flex-shrink-0 w-10/12 sm:w-1/2 md:w-1/3 lg:w-1/4" data-aos="fade-up" data-aos-delay="500">
+            <div class="bg-white p-6 rounded-lg shadow-lg text-center h-full">
+              <img src="hallOfFame/TheRetroQueen.jpg" alt="Photo 5" class="w-full h-80 object-cover rounded-md mb-4">
+              <h3 class="text-2xl font-anime text-sakura">The Retro Queen</h3>
+            </div>
+          </div>
+          <!-- Card 6 -->
+          <div class="snap-center flex-shrink-0 w-10/12 sm:w-1/2 md:w-1/3 lg:w-1/4" data-aos="fade-up" data-aos-delay="600">
+            <div class="bg-white p-6 rounded-lg shadow-lg text-center h-full">
+              <img src="hallOfFame/PaintedInTradition.jpg" alt="Photo 6" class="w-full h-80 object-cover rounded-md mb-4">
+              <h3 class="text-2xl font-anime text-sakura">Painted in Tradition</h3>
+            </div>
+          </div>
+          <!-- Card 7 -->
+          <div class="snap-center flex-shrink-0 w-10/12 sm:w-1/2 md:w-1/3 lg:w-1/4" data-aos="fade-up" data-aos-delay="600">
+            <div class="bg-white p-6 rounded-lg shadow-lg text-center h-full">
+              <img src="hallOfFame/JurassicQueen.jpg" alt="Photo 6" class="w-full h-80 object-cover rounded-md mb-4">
+              <h3 class="text-2xl font-anime text-sakura">The Jurassic Queen</h3>
+            </div>
+          </div>
+          <!-- Card 8 -->
+          <div class="snap-center flex-shrink-0 w-10/12 sm:w-1/2 md:w-1/3 lg:w-1/4" data-aos="fade-up" data-aos-delay="600">
+            <div class="bg-white p-6 rounded-lg shadow-lg text-center h-full">
+              <img src="hallOfFame/ThePrincess.jpg" alt="Photo 6" class="w-full h-80 object-cover rounded-md mb-4">
+              <h3 class="text-2xl font-anime text-sakura">The Princess</h3>
+            </div>
+          </div>
+          <!-- Card 9 -->
+          <div class="snap-center flex-shrink-0 w-10/12 sm:w-1/2 md:w-1/3 lg:w-1/4" data-aos="fade-up" data-aos-delay="600">
+            <div class="bg-white p-6 rounded-lg shadow-lg text-center h-full">
+              <img src="hallOfFame/TheMermaid.jpg" alt="Photo 6" class="w-full h-80 object-cover rounded-md mb-4">
+              <h3 class="text-2xl font-anime text-sakura">The Mermaid</h3>
+            </div>
+          </div>
+          <!-- Card 10 -->
+          <div class="snap-center flex-shrink-0 w-10/12 sm:w-1/2 md:w-1/3 lg:w-1/4" data-aos="fade-up" data-aos-delay="600">
+            <div class="bg-white p-6 rounded-lg shadow-lg text-center h-full">
+              <img src="hallOfFame/TheSillyGoose.jpg" alt="Photo 6" class="w-full h-80 object-cover rounded-md mb-4">
+              <h3 class="text-2xl font-anime text-sakura">The Silly Goose
+              </h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 5: The Gallery -->
+  <section class="my-16 md:my-24">
+    <h2 class="text-4xl md:text-5xl font-anime text-center mb-12" data-aos="fade-up">The Y.V.A. Collection</h2>
+    <p class="text-center text-lg -mt-8 mb-12">(Your Very-own Adventures)</p>
+    <div id="lightgallery" class="grid grid-cols-2 md:grid-cols-4 gap-4">
+      <video width="320" height="240" autoplay loop muted>
+        <source src="yva/YVA1.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <video width="320" height="240" autoplay loop muted>
+        <source src="yva/YVA2.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <video width="320" height="240" autoplay loop muted>
+        <source src="yva/YVA3.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <video width="320" height="240" autoplay loop muted>
+        <source src="yva/YVA4.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <video width="320" height="240" autoplay loop muted>
+        <source src="yva/YVA5.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <video width="320" height="240" autoplay loop muted>
+        <source src="yva/YVA6.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <video width="320" height="240" autoplay loop muted>
+        <source src="yva/YVA7.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <video width="320" height="240" autoplay loop muted>
+        <source src="yva/YVA8.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <video width="320" height="240" autoplay loop muted>
+        <source src="yva/YVA9.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <video width="320" height="240" autoplay loop muted>
+        <source src="yva/YVA10.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <video width="320" height="240" autoplay loop muted>
+        <source src="yva/YVA11.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <video width="320" height="240" autoplay loop muted>
+        <source src="yva/YVA12.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </section>
+
+    <!-- Section 6: Finale -->
+    <section class="my-16 md:my-24" data-aos="fade-up">
+        <h2 class="text-4xl md:text-5xl font-anime text-center mb-4">Happy Birthday Mansi</h2>
+        <div class="max-w-4xl mx-auto rounded-lg shadow-2xl overflow-hidden bg-navy">
+    </section>
+
+</main>
+
+<!-- Footer -->
+<footer class="bg-navy text-white p-8 text-center">
+  <p>Enjoy your day to the fullest.</p>
+  <section class="final-message">
+    <h2>And Thank You for the Memories</h2>
+  </section>
+</footer>
+
+<!-- These scripts are for the animations and photo gallery -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.1/lightgallery.min.js"></script>
+
+<!-- Link to your new external JavaScript file -->
+<script src="storyArc.js"></script>
+</body>
+</html>
